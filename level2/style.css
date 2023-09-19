@@ -1,0 +1,85 @@
+.logo {
+  border-radius: 80%;
+  border: solid rgb(34, 88, 15);
+  position: absolute;
+  left: 0;
+  width: 50px;
+  padding: 1px 1px 1px 1px;
+  margin-left: 3%;
+  min-height: 1vh;
+}
+
+.header h1 {
+  position: absolute;
+  left: 0;
+  margin-left: 10%;
+}
+.header b {
+  margin-left: 3%;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+}
+.header {
+  background-color: rgba(122, 212, 83, 0.574);
+  display: flex;
+  padding: 15px;
+  flex-flow: row nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.nav {
+  display: block;
+  background-color: rgba(122, 212, 83, 0.574);
+  margin-top: 1%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.nav h3 {
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 30px;
+  text-align: center;
+  padding-top: 3%;
+  border-bottom: 2px solid rgb(51, 136, 21);
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(27, 71, 32);
+}
+
+.table {
+  border: 2px solid rgb(0, 0, 0);
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.table td,
+th {
+  text-align: center;
+  padding: 3px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+tr.even {
+  background-color: rgb(251, 220, 248);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
