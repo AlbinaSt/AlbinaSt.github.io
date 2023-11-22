@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="galery.js" defer=""></script>
+    <script src="calcul.js" defer=""></script>
+    <script src="js8.js" defer=""></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body style="margin: 0">
+    <div class="container-fluid">
+      <header id="m">
+        <div class="row d-flex mx-2">
+          <img class="logo" src="image.png" alt="Картинка" />
+          <div class="col-md-9 order-sm-2 mt-3">
+            <nav class id="menu">
+              <a href="#list">гиперссылки</a>
+              <a href="#table">таблица</a>
+              <a href="#form">форма</a>
+            </nav>
+          </div>
+          <div class="col-md-3 order-sm-1 mt-md-5">
+            <div class="row justify-content-center">
+              <h1>Мой сайт</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main>
+      <form id="myForm" name="contact-form" class="ajaxForm" action="https://formcarry.com/s/jueViKGUnz" method="POST" accept-charset="UTF-8" enctype="multipart/form-data
+">
+
+<div class="b-container">
+    <a href="javascript:PopUpShow()">Оставить заявку</a>
+</div>
+<div class="b-popup" id="popup1" style="display: none;">
+    <div class="b-popup-content">
+        ФИО:<br>
+            <input required="" name="field-name-1" id="area" placeholder="Введите ваше ФИО">
+            <br>
+            <label>
+            Телефон:<br>
+            <input required="" name="field-phone" id="phone" type="number" placeholder="Введите ваш телефон">
+        </label><br>
+        <label>
+            Email:<br>
+            <input required="" name="field-email" id="mail" type="email" placeholder="Введите вашу почту"></label>
+            <label>
+                Организация:<br>
+                <input required="" name="field-name-1" id="orz" placeholder="Введите вашу организацию">
+                </label><br>
+                Сообщение:<br>
+                <textarea required="" name="field-name-2" placeholder="Введите ваше сообщение" id="coob"></textarea>
+                <br>
+                <label><input required="" type="checkbox" checked="checked" name="check-1">
+                С контрактом ознакомлен(а)</label><br>
+                <input type="submit" value="Сохранить">
+                <br>
+                
+            <div id="menu">
+    <a href="javascript:PopUpHide()" color="black">назад</a>
+</div>
+    </div>
+</div></form>
+              <div class="col-8 col-md-6 container mt-4 mb-4">
+                <div>
+                  <p class="h1">Калькулятор стоимости торта</p>
+                </div>
+
+                <form
+                  class="col justify-content-center align-items-center"
+                >
+                  <input
+                    class="col"
+                    required=""
+                    type="string"
+                    id="quantity_of_goods"
+                    placeholder="Введите количество"
+                  />
+
+                  <select class="col" id="goods_type">
+                    <option value="tomato">Панчо</option>
+                    <option value="cucumber">Наполеон</option>
+                    <option value="zucchini">Медовик</option>
+                    <option value="onion">Шоколадный торт</option>
+                  </select>
+
+                  <div class="col m-2" id="radios">
+                    <input
+                      class="me-2"
+                      required=""
+                      type="radio"
+                      id="radio_button_checked_by_default"
+                      name="service_type"
+                      value="Flowers"
+                    /><b>Маленький</b>
+                    <input
+                      class="ms-3 me-2"
+                      required=""
+                      type="radio"
+                      name="service_type"
+                      value="Aubergine"
+                    /><b>Большой</b>
+                    <input
+                      class="ms-3 me-2"
+                      required=""
+                      type="radio"
+                      name="service_type"
+                      value="Loans"
+                    /><b>Средний</b>
+                  </div>
+
+                  <select
+                    class="col"
+                    style="display: none"
+                    id="aubergine_options"
+                  >
+                    <option name="freshness" value="fresh">Двухярусный</option>
+                    <option name="freshness" value="not_fresh">
+                      Одноярусный
+                    </option>
+                  </select>
+
+                  <div class="col row" style="display: block" id="loan_options">
+                    <p class="col">
+                      <input
+                        class="me-2"
+                        required=""
+                        type="checkbox"
+                        name="loan_options_type"
+                        value="long_support"
+                      />Со свечами
+                    </p>
+                    <p class="col">
+                      <input
+                        class="me-2"
+                        required=""
+                        type="checkbox"
+                        name="loan_options_type"
+                        value="grandson_too"
+                      />С поздравительной открыткой
+                    </p>
+                  </div>
+
+                  <div class="container">
+                    <div class="row">
+      
+                      <button type="button" id="buttonLeft" class="col me-2 rounded">
+                        &#8592;
+                      </button>
+      
+                      <img id="image1" class="col sm" src="1.jpg" width="120" height="100">
+                      <img id="image2" class="col sm" src="2.jpg" width="120" height="100">
+                      <img id="image3" class="col sm" src="3.jpg" width="120" height="100">
+      
+                      <button type="button" id="buttonRight" class="col ms-2 rounded">
+                        &#8594;
+                      </button>
+      
+                    </div>
+                  </div>
+                  <div class="col mt-2">
+                    <span id="pager">
+                      1/8
+                    </span>
+                  </div>
+                </div>
+      
+        <h2 id="list" class="main">Список гиперссылок</h2>
+        <ul>
+          <li>
+            <a
+              href="http://www.kubsu.ru/index.php"
+              target="_blank"
+              title="Официальный сайт Кубанского государственного университета"
+              >КубГУ
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.kubsu.ru/index.php"
+              target="_blank"
+              title="Официальный сайт Кубанского государственного университета"
+              >КубГУ
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/" target="_blank"
+              ><img src="image.jpg" width="400" alt="Plant" />
+            </a>
+          </li>
+
+          <li>
+            <a href="internal.html" target="_blank"
+              >Сокращенная ссылка на внутреннюю страницу</a
+            >
+          </li>
+
+          <li>
+            <a href="index.html" target="_blank"
+              >Сокращенная ссылка на главную страницу</a
+            >
+          </li>
+
+          <li>
+            <a href="#Fragment" title="Ссылка на фрагмент страницы"
+              >Фрагмент страницы</a
+            >
+          </li>
+
+          <li>
+            <a href="?id=11&flex=no&debug=off" target="_blank"
+              >Ссылка с тремя параметрами</a
+            >
+          </li>
+
+          <li>
+            <a href="?id=1" target="_blank">Ссылка с параметром id</a>
+          </li>
+
+          <li>
+            <a href="./internal.html" target="_blank"
+              >Относительная ссылка на страницу текущем каталоге</a
+            >
+          </li>
+
+          <li>
+            <a href="./about/about.html" target="_blank"
+              >Относительная ссылка на страницу в каталоге about</a
+            >
+          </li>
+
+          <li>
+            <a href="../levelone.html" target="_blank"
+              >Относительная ссылка на страницу в каталоге уровнем выше</a
+            >
+          </li>
+
+          <li>
+            <a href="../../leveltwo.html" target="_blank"
+              >Относительная ссылка на страницу в каталоге двумя уровнями
+              выше</a
+            >
+          </li>
+
+          <li>
+            На сайте нашего
+            <a href="https://www.kubsu.ru/ru/fktipm" target="blank"
+              >факультета</a
+            >
+            можно найти информацию о направлении "Прикладная математика и
+            информатика"
+          </li>
+
+          <li>
+            <img src="shape.jpg" width="400" usemap="#plantmap" alt="Shapes" />
+            <map name="plantmap">
+              <area
+                shape="circle"
+                coords="70,68,60"
+                href="https://www.kubsu.ru/index.php"
+                target="blank"
+                alt="Кубгу"
+              />
+              <area
+                shape="rect"
+                coords="203,25,380,90"
+                href="https://www.kubsu.ru/ru/university/departments"
+                target="blank"
+                alt="Факультеты"
+              />
+            </map>
+          </li>
+
+          <li>
+            <a
+              href="https://www.kubsu.ru/ru/education/programs#:~:text=%D0%A4%D0%B0%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D1%85%20%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9"
+              target="_blank"
+              >Ссылка на фрагмент страницы стороннего сайта</a
+            >
+          </li>
+
+          <li>
+            <a href="">Ссылка с пуcтым href</a>
+          </li>
+
+          <li>
+            <a>Ссылка без href</a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/" rel="nofollow" target="blank"
+              >Ссылка,</a
+            >
+            по которой запрещен переход поисковиками
+          </li>
+
+          <li>
+            <a href="https://leetcode.com/" target="blank">
+              <!-- <noindex> -->Запрещена индексация поисковиками<!-- </noindex> --></a
+            >
+          </li>
+
+          <li>
+            <strong>Нумерованный список ссылок с подписями title:</strong>
+            <ol>
+              <li>
+                <a
+                  href="https://www.kubsu.ru/ru/fktipm/prikladnaya-matematika-i-informatika-matematicheskie-i-informacionnye-tehnologii-v-cifrovoy"
+                  title="Прикладная математика и информатика"
+                  target="blank"
+                  >Направление подготовки</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/intl/ru/gmail/about/"
+                  title="Gmail"
+                  target="blank"
+                  >Почта</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <a href="ftp://s0177156:12345/ex/file.txt" target="blank"
+              >Ссылка на файл на сервере ftp с авторизацией</a
+            >
+          </li>
+        </ul>
+
+        <h3 id="Fragment" class="main">На эту строку сделана ссылка</h3>
+      </main>
+      <section>
+        <table id="table" class="table">
+          <tbody>
+            <tr>
+              <th>Колонка 1</th>
+              <th>Колонка 2</th>
+              <th>Колонка 3</th>
+              <th>Колонка 4</th>
+            </tr>
+            <tr class="even">
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td colspan="2">21 и 22</td>
+              <td>23</td>
+              <td>24</td>
+            </tr>
+            <tr class="even">
+              <td>31</td>
+              <td>32</td>
+              <td>33</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>41</td>
+              <td>42</td>
+              <td>43</td>
+              <td>44</td>
+            </tr>
+            <tr class="even">
+              <td>51</td>
+              <td>52</td>
+              <td>53</td>
+              <td>54</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <aside class="c">
+      <h1 id="form">Форма</h1>
+      <form>
+        <label>
+          ФИО:<br />
+          <input
+            required
+            name="field-name"
+            type="text"
+            placeholder="Введите ФИО"
+          /> </label
+        ><br />
+        <label>
+          Телефон:<br />
+          <input
+            required
+            name="telephone"
+            type="tel"
+            placeholder="Введите номер телефона"
+          /> </label
+        ><br />
+        <label>
+          Email:<br />
+          <input
+            required
+            name="email"
+            type="email"
+            placeholder="Введите вашу почту"
+          /> </label
+        ><br />
+        <br />
+        <label>
+          Дата рождения:<br />
+          <input name="field-date" value="2000-01-01" type="date" /> </label
+        ><br />
+        <br />
+        Ваш пол:<br />
+        <label
+          ><input
+            type="radio"
+            checked="checked"
+            name="radio-group-1"
+            value="м"
+          />
+          Мужчина</label
+        >
+        <br />
+        <label
+          ><input type="radio" name="radio-group-1" value="ж" /> Женщина</label
+        ><br />
+        <br />
+        <label>
+          Выберете любимый язык программирования:<br />
+          <select name="field-name-3" multiple="multiple">
+            <option value="value1" selected="selected">Pascal</option>
+            <option value="value2">C</option>
+            <option value="value3">C++</option>
+            <option value="value4">JavaScript</option>
+            <option value="value5">PHP</option>
+            <option value="value6">Python</option>
+            <option value="value4">Java</option>
+            <option value="value5">Haskel</option>
+            <option value="value6">Clojure</option>
+            <option value="value4">Prolog</option>
+            <option value="value5">Scala</option>
+          </select> </label
+        ><br />
+        <br />
+        <label>
+          Биография:<br />
+          <textarea
+            name="field-name-2"
+            placeholder="Введите текст"
+          ></textarea></label
+        ><br />
+
+        <br />
+        <label
+          ><input required type="checkbox" checked="checked" name="check-1" /> С
+          контрактом ознакомлен</label
+        ><br />
+        <br />
+        <input type="submit" value="Сохранить" />
+      </form>
+    </aside>
+    <footer class="footer">(с) Старикова Альбина</footer>
+  </body>
+</html>
