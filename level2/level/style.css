@@ -155,11 +155,17 @@ div.name {
 }
 .b-popup{
   width:100%;
+  z-index: 2;
   min-height:100%;
   background-color: rgba(0,0,0,0.5);
   overflow:hidden;
   position:fixed;
   top:0px;
+}
+.col-8.col-md-6.container.mt-4.mb-4 {
+    z-index: 1;
+  position:relative;
+    
 }
 .b-popup .b-popup-content{
   margin:40px auto 0px auto;
