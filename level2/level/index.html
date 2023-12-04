@@ -45,22 +45,36 @@
   <form action="https://formcarry.com/s/jueViKGUnz" method="POST" enctype="multipart/form-data">
     
     <div class="formcarry-block">
-      <label for="fc-generated-1-name">Full Name</label>
-      <input type="text" name="name" id="fc-generated-1-name" placeholder="Your first and last name" />
+      <label for="fc-generated-1-name">Полное имя</label>
+      <input type="text" name="name" id="fc-generated-1-name" placeholder="ФИО" />
+    </div>
+
+     <div class="formcarry-block">
+      <label for="fc-generated-1-name">Ваш номер телефона</label>
+      <input type="number" name="number" id="fc-generated-1-number" placeholder="Телефон" />
     </div>
   	
     <div class="formcarry-block">
-      <label for="fc-generated-1-email">Your Email Address</label>
-      <input type="email" name="email" id="fc-generated-1-email" placeholder="john@doe.com" />
+      <label for="fc-generated-1-email">Ваша почта</label>
+      <input type="email" name="email" id="fc-generated-1-email" placeholder="john@gmail.com" />
+    </div>
+
+     <div class="formcarry-block">
+      <label for="fc-generated-1-org">Введите вашу организацию</label>
+      <input type="text" name="org" id="fc-generated-1-org" placeholder="Ваша организация" />
     </div>
   	
     <div class="formcarry-block">
-      <label for="fc-generated-1-message">Your message</label>
-      <textarea name="message" name="message" id="fc-generated-1-message" placeholder="Enter your message..."></textarea>
+      <label for="fc-generated-1-message">Ваше сообщение</label>
+      <textarea name="message" name="message" id="fc-generated-1-message" placeholder="Введите ваше сообщение..."></textarea>
     </div>
-  	
+
+     <label><input required type="checkbox" checked="checked"
+                    name="check-1" />
+                С контрактом ознакомлен(а)</label>
+    
     <div class="formcarry-block">  
-      <button type="submit">Send</button>
+      <button type="submit">Отправить</button>
     </div>
   
   </form>
@@ -114,10 +128,6 @@
       margin-top: 16px;
     }
 
-    /*=============================================
-    =            Fields           =
-    =============================================*/
-    
     .formcarry-container input,
     .formcarry-container textarea,
     .formcarry-container select {
@@ -242,7 +252,6 @@
       box-shadow: 0px 0px 0px 3px hsla(var(--fc-error-hsl), 12%);
     }
 
-    /*=====  End of Fields  ======*/
 </style>
     <main>
       
