@@ -147,6 +147,7 @@ div.name {
 .feedback-form {
   display: none;
   position: fixed;
+  z-index: 3;
   top: 50%!;(MISSING)
   left: 50%!;(MISSING)
   transform: translate(-50%!,(MISSING) -50%!)(MISSING);
