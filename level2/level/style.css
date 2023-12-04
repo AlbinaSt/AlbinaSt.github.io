@@ -148,14 +148,3 @@ div.name {
 *{
   font-family: Areal;
 }
-.feedback-form {
-  display: none;
-  position: fixed;
-  z-index: 3;
-  top: 50%!;(MISSING)
-  left: 50%!;(MISSING)
-  transform: translate(-50%!,(MISSING) -50%!)(MISSING);
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
