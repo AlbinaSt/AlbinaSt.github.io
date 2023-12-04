@@ -1,31 +1,54 @@
-    // Показать попап при клике на кнопку
-    document.getElementById('openPopup').addEventListener('click', function() {
-      document.getElementById('popup').style.display = 'block';
-    });
-
-    // Обработка отправки формы
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-
-      fetch('https://formcarry.com/s/ВАШ_ID_ФОРМЫ', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Ошибка при отправке данных');
+$(document).ready(function(){
+    //Скрыть PopUp при загрузке страницы    
+    PopUpHide();
+});
+//Функция отображения PopUp
+function PopUpShow(){
+    $("#popup1").show();
+}
+//Функция скрытия PopUp
+function PopUpHide(){
+    $("#popup1").hide();
+}
+$(function(){
+    $(".ajaxForm").submit(function(e){
+      e.preventDefault();
+      var href = $(this).attr("action");
+      $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: href,
+        data: $(this).serialize(),
+        success: function(response){
+          if(response.status == "success"){
+            alert("Данные отправились, спасибо!");
+            var frm = document.getElementsByName('contact-form')[0];
+            frm.reset();
+            return false;
+          }else{
+            alert("Произошла ошибка: " + response.message);
+          }
         }
-        return response.json();
-      })
-      .then(data => {
-        document.getElementById('message').innerText = 'Данные успешно отправлены';
-        // Дополнительные действия после успешной отправки
-        console.log(data);
-      })
-      .catch(error => {
-        document.getElementById('message').innerText = error.message || 'Что-то пошло не так';
-        // Дополнительные действия при ошибке
-        console.error(error);
       });
     });
+  });
+area.onchange = function(e1) {
+    localStorage.setItem("text", e1.target.value)
+    }
+    if(localStorage.text) area.value = localStorage.text
+phone.onchange = function(e2) {
+    localStorage.setItem("number", e2.target.value)
+    }
+    if(localStorage.number) phone.value = localStorage.number
+mail.onchange = function(e3) {
+    localStorage.setItem("email", e3.target.value)
+    }
+    if(localStorage.email) mail.value = localStorage.email
+orz.onchange = function(e4) {
+    localStorage.setItem("orz", e4.target.value)
+    }
+    if(localStorage.orz) orz.value = localStorage.orz
+coob.onchange = function(e5) {
+    localStorage.setItem("coob", e5.target.value)
+    }
+    if(localStorage.coob) coob.value = localStorage.coob
