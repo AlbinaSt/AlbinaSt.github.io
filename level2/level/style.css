@@ -10,6 +10,10 @@
   float: left;
 }
 
+form {
+  z-index: 1;
+}
+
 aside.c {
   display: flex;
   flex-flow: column nowrap;
