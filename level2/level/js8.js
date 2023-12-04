@@ -11,7 +11,7 @@ function PopUpHide(){
     $("#popup1").hide();
 }
 $(function(){
-    $(".formcarryForm").submit(function(e){
+    $(".ajaxForm").submit(function(e){
       e.preventDefault();
       var href = $(this).attr("action");
       $.ajax({
