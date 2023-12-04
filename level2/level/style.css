@@ -160,6 +160,7 @@ div.name {
 }
 .b-popup{
   width:100%;
+  z-index: 3;
   min-height:100%;
   background-color: rgba(0,0,0,0.5);
   overflow:hidden;
