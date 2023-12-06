@@ -11,27 +11,29 @@ function PopUpHide(){
     $("#popup1").hide();
 }
 $(function(){
-    $(".ajaxForm").submit(function(e){
-      e.preventDefault();
-      var href = $(this).attr("action");
-      $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: href,
-        data: $(this).serialize(),
-        success: function(response){
-          if(response.status == "success"){
-            alert("Данные отправились, спасибо!");
-            var frm = document.getElementsByName('contact-form')[0];
-            frm.reset();
-            return false;
-          }else{
-            alert("Произошла ошибка: " + response.message);
-          }
+  $(".ajaxForm").submit(function(e){
+    e.preventDefault();
+    var href = $(this).attr("action");
+    
+    $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: href,
+      data: $(this).serialize(),
+      success: function(response){
+        if(response.status == "success"){
+          alert("Данные отправились, спасибо!");
+          $(".ajaxForm")[0].reset();  // Reset the form
+        }else{
+          alert("Произошла ошибка: " + response.message);
         }
-      });
+      },
+      error: function(xhr, status, error) {
+        alert("Произошла ошибка при отправке данных: " + error);
+      }
     });
   });
+});
 area.onchange = function(e1) {
     localStorage.setItem("text", e1.target.value)
     }
