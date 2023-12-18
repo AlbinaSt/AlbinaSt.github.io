@@ -176,3 +176,11 @@ div.name {
   border-radius:5px;
   box-shadow: 0px 0px 10px #000;
 }
+
+.b-container a{
+   align-items: center;
+   text-align: center;
+   color: #000000;
+   text-decoration: none;
+   font-size: 50px;
+}
