@@ -273,6 +273,32 @@ body {
   margin-bottom: 20px;
 }
 
+.image-slider {
+  margin: 2px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 150px;
+  transition: scroll 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.avtoslider h3 {
+  font-family: "Tinos", serif;
+  font-size: 54px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 150px;
+}
+
+.image-slider img {
+  border: 0.5px solid rgb(182, 179, 176);
+  width: 250px;
+  height: 150px;
+  display: inline-block;
+}
+
 .left-text {
   font-weight: 700;
   font-size: 24px;
