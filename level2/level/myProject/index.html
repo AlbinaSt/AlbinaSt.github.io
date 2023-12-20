@@ -33,7 +33,7 @@
   </head>
 
   
-  <body>
+  <body onload="startAutoScroll()">
     <div class="header">
       <div class="container">
         <div class="header-line">
@@ -410,6 +410,46 @@
 <div id="message" class="message"></div>
     </div>
 </div>
+
+    <script>
+  function startAutoScroll(slider) {
+    var images = slider.getElementsByTagName("img");
+    // Убедитесь, что изображения полностью загружены
+    window.onload = function() {
+      var imageWidth = images[0].width; // Предполагаем, что все изображения одинаковой ширины
+      var currentScrollLeft = slider.scrollLeft;
+      var direction = 1; // Направление прокрутки: 1 - вправо, -1 - влево
+
+      // Используйте smooth scrolling
+      setInterval(function () {
+        currentScrollLeft += direction * 258; // Прокрутка на более мелкие шаги
+        if (currentScrollLeft >= slider.scrollWidth - slider.clientWidth || currentScrollLeft <= 0) {
+          // Изменить направление на противоположное
+          direction *= -1;
+        }
+        // Устанавливать прокрутку в пределах возможного диапазона
+        slider.scrollLeft = Math.min(Math.max(0, currentScrollLeft), slider.scrollWidth - slider.clientWidth);
+      }, 3000); // Более частые интервалы могут создать эффект плавной прокрутки
+    }
+  }
+  </script>
+  <div class="avtoslider">
+  <h3>С нами работают</h3>
+<div id="imageSlider1" class="image-slider" onmousedown="startDrag(event)" style="text-align: center;vertical-align: middle;">
+  <img src="magnit.png" alt="Image 1">
+  <img src="tabris.png" alt="Image 2">
+  <img src="sber.png" alt="Image 3">
+  <img src="rostel.png" alt="Image 4">
+  <img src="sokol.png" alt="Image 5">
+  <img src="delivery.png" alt="Image 6">
+  <img src="yandex.png" alt="Image 7">
+  <img src="youtube.png" alt="Image 8">
+</div>
+  </div>
+<script>
+  startAutoScroll(document.getElementById("imageSlider1"));
+</script>
+
 
   <footer class="footer-bs">
     <div class="row">
